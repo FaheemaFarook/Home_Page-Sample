@@ -10,14 +10,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    perspective: 1000px;
-    overflow: hidden;
-    transform-style: preserve-3d;
 }
 
 h1,h2, h3, h4, h5, h6 {
     font-family: serif;
+    color: rgba(0, 0, 128, 0.74);
     font-weight: 700;
 }
 
@@ -60,9 +57,10 @@ li:hover {
 }
 /* END NAVBAR */
 
+/* start about */
 #about {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60') no-repeat center center fixed;
     background-size: cover;
     display: flex;
@@ -84,3 +82,100 @@ li:hover {
     color: #000000;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
 }
+/* end about */
+
+/* start main */
+#main {
+    width: 100%;
+    height: auto;
+    background: #c3c1c1;
+    margin-top: 0;
+}
+
+#main p {
+    margin: 30px 80px;
+    text-align: justify;
+    color: #000000;
+}
+/* end main */
+
+/* start services */
+#services {
+    width: 100%;
+    height: auto;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 500px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    gap: 5em;
+  }
+  .container .card {
+    position: relative;
+    cursor: pointer;
+  }
+  .container .card .face {
+    width: 370px;
+    height: 250px;
+    transition: 0.5s;
+  }
+  .container .card .face.face1 {
+    position: relative;
+    background: rgb(68, 68, 68);
+    z-index: 1;
+    transform: translateY(100px);
+  }
+  .container .card:hover .face.face1 {
+    background: #007474;
+    transform: translateY(0);
+  }
+  .container .card .face.face1 .info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  .container .card:hover .face.face1 .info {
+    opacity: 1;
+  }
+
+  .container .card .face.face1 .info img {
+    max-width: 150px;
+  }
+  .container .card .face.face1 .info h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .container .card .face.face2 {
+    position: relative;
+    background: #fff;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-150px);
+  }
+  .container .card:hover .face.face2 {
+    transform: translateY(0);
+  }
+  .container .card .face.face2 .info p {
+    margin: 0;
+    padding: 0;
+  }
+/* end services */
