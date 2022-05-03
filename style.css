@@ -129,8 +129,17 @@ li:hover {
     height: auto;
     padding: 10px 20px;
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     justify-content: center;
     align-items: center;
+  }
+
+  .title {
+    padding-top: 20px;
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: bolder;
   }
 
   .container {
@@ -283,7 +292,8 @@ li:hover {
   justify-content: center;
   align-items: center;
   gap: 30px;
-  background: #000029ab;
+  background: #0b0c1aa8;
+
 }
 
 .title {
@@ -291,6 +301,13 @@ li:hover {
   font-size: 36px;
   color: #1f2937;
   font-weight: bolder;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
 }
 
 .column {
@@ -357,6 +374,218 @@ li:hover {
   background-color: #555;
 }
 /* end team */
+
+/* start story */
+#story {
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  background-color: #100e17;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  padding-top: 20px;
+  font-size: 36px;
+  color: #1f2937;
+  font-weight: bolder;
+}
+
+#story .cont {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  top: 60px;
+  left: calc(50% - 300px);
+  display: flex;
+}
+
+#story .cont .card1 {
+  display: flex;
+  height: 280px;
+  width: 300px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card1:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card1:hover {
+  transform: translateX(-50px);
+  transition: 0.4s ease-out;
+}
+
+.card1:hover ~ .card1 {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.topic {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.card1 img {
+  padding: 5px;
+  width: 300px;
+  height: 280px;
+}
+/* end story */
+
+/* start sm links */
+#sm-links {
+  margin-top: 5px;
+  height: 15vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+.contact-links .btn,
+.contact-links .btn:before,
+.contact-links .btn .fa {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.contact-links .btn:before {
+  top: 90%;
+  left: -110%;
+}
+.contact-links .btn .fa {
+  transform: scale(0.8);
+}
+.contact-links .btn.facebook:before {
+  background-color: #3b5998;
+}
+.contact-links .btn.facebook .fa {
+  color: #3b5998;
+}
+.contact-links .btn.instagram:before {
+  background-color: #f54c87;
+}
+.contact-links .btn.instagram .fa {
+  color: #f54c87;
+}
+.contact-links .btn.linkedIn:before {
+  background-color: #0e76a8;
+}
+.contact-links .btn.linkedIn .fa {
+  color: #0e76a8;
+}
+.contact-links .btn.twitter:before {
+  background-color: #00acee;
+}
+.contact-links .btn.twitter .fa {
+  color: #00acee;
+}
+
+.contact-links .btn:focus:before,
+.contact-links .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.contact-links .btn:focus .fa,
+.contact-links .btn:hover .fa {
+  color: #fff;
+  transform: scale(1);
+}
+.contact-links {
+  height: 60px;
+  margin: auto;
+  font-size: 0;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.contact-links .btn {
+  display: inline-block;
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,0.1);
+  opacity: 0.99;
+}
+.contact-links .btn:before {
+  content: '';
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+.contact-links .btn .fa {
+  font-size: 38px;
+  vertical-align: middle;
+}
+/* end sm links */
+
+/* start contact */
+#contact {
+  background-color: #3882f6;
+  border-radius: 10px;
+  margin: 35px;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 120px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text1 {
+  color: #f9faf8;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.text2 {
+  color: #f9faf8;
+  font-size: 18px;
+}
+
+#contact button {
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 30px;
+  font-size: 15px;
+  background-color: #ee0800;
+  color: #ffffff;
+  transition-duration: 0.4s;
+}
+
+#contact button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+/* end contact */
 
 /* START FOOTER */
 #footer {
